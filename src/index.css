@@ -11,3 +11,91 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.nav-add{
+  height: 100vh;
+  position: absolute;
+}
+
+.h1-cl{
+position: absolute;
+width: 235px;
+height: 102px;
+left: 22px;
+top: 10px;
+font-family: 'Amiri';
+font-style: normal;
+font-weight: 500;
+font-size: 70px;
+color: #FFFFFF;
+display: flex;
+align-items: center;
+text-align: center;
+padding-bottom: 30px;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.nav-sub{
+  color: #FFFFFF !important;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+align-items: center !important;
+margin-left: 50px;
+}
+
+.sub-nav{
+  margin-top: 50px;
+}
+
+.highlight-nav{
+  background-color:#1DD24A;
+  border-radius: 30px;
+
+}
+
+.you{
+  margin-top: 90px;
+  margin-left: -30px;
+  font-size: 50px !important;
+}
+
+.nav-dwn{
+  margin-top: 80px;
+  margin-left: -50px;
+
+}
+.h1-course{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+color: #6C5984 !important;
+}
+.h2-course{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 27px;
+line-height: 36px;
+color: #6C5984 !important;
+margin-left: -10px;
+}
+.search{
+  margin-left: 400px;
+  display: inline-block;
+  margin-top: -20px !important;
+}
+.top-course{
+  
+}
+.search-in{
+  width: 200px !important;
+}
+.r{
+  
+  width: 300px !important;
+  margin-left: 30px;
+}

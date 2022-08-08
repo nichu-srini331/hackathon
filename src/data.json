@@ -1,0 +1,128 @@
+{
+  "id": "api.content.read",
+  "ver": "1.0",
+  "ts": "2022-08-05T18:33:16.645Z",
+  "params": {
+    "resmsgid": "12602950-14ed-11ed-a4b4-b3a8ae4079a0",
+    "msgid": "125e5490-14ed-11ed-8705-7b3af6d910db",
+    "status": "successful",
+    "err": null,
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "content": {
+      "ownershipType": [
+        "createdBy"
+      ],
+      "copyright": "Gujarat, KAWAIMARI ANCHALIK HS.",
+      "previewUrl": "https://ntpstagingall.blob.core.windows.net/ntp-content-staging/content/assets/do_2134773120371752961108/4.mp4",
+      "subject": [
+        "Science"
+      ],
+      "channel": "01338593919406080038",
+      "downloadUrl": "https://ntpstagingall.blob.core.windows.net/ntp-content-staging/content/do_2134773120371752961108/nutrition-in-plants-part-13-english-class-7_1645180849251_do_2134773120371752961108_1.ecar",
+      "organisation": [
+        "Gujarat",
+        "KAWAIMARI ANCHALIK HS."
+      ],
+      "showNotification": true,
+      "language": [
+        "English"
+      ],
+      "mimeType": "video/mp4",
+      "variants": {
+        "full": {
+          "ecarUrl": "https://ntpstagingall.blob.core.windows.net/ntp-content-staging/content/do_2134773120371752961108/nutrition-in-plants-part-13-english-class-7_1645180849251_do_2134773120371752961108_1.ecar",
+          "size": "33408646"
+        },
+        "spine": {
+          "ecarUrl": "https://ntpstagingall.blob.core.windows.net/ntp-content-staging/content/do_2134773120371752961108/nutrition-in-plants-part-13-english-class-7_1645180851382_do_2134773120371752961108_1_SPINE.ecar",
+          "size": "4128"
+        }
+      },
+      "objectType": "Content",
+      "se_mediums": [
+        "English"
+      ],
+      "gradeLevel": [
+        "Class 7"
+      ],
+      "appIcon": "https://ntpstagingall.blob.core.windows.net/ntp-content-staging/content/do_2134773120371752961108/artifact/download-2_1531471721191.thumb.jpg",
+      "primaryCategory": "Explanation Content",
+      "contentEncoding": "identity",
+      "artifactUrl": "https://ntpstagingall.blob.core.windows.net/ntp-content-staging/content/assets/do_2134773120371752961108/4.mp4",
+      "lockKey": "ebcfabd0-5ba6-4123-8ebe-b5d3737b3b14",
+      "contentType": "Resource",
+      "se_gradeLevels": [
+        "Class 7"
+      ],
+      "identifier": "do_2134773120371752961108",
+      "lastUpdatedBy": "ef2e9696-7ef1-4cb2-bc28-4cac604f7f41",
+      "audience": [
+        "Student"
+      ],
+      "visibility": "Default",
+      "discussionForum": {
+        "enabled": "No"
+      },
+      "mediaType": "content",
+      "osId": "org.ekstep.quiz.app",
+      "languageCode": [
+        "en"
+      ],
+      "lastPublishedBy": "1116d7ac-328a-49a4-a0e7-c5a3130da2d4",
+      "version": 2,
+      "se_subjects": [
+        "Science"
+      ],
+      "license": "CC BY 4.0",
+      "prevState": "Review",
+      "size": 34474710,
+      "lastPublishedOn": "2022-02-18T10:40:49.072+0000",
+      "name": "Nutrition In Plants | Part 1/3 | English | Class 7",
+      "status": "Live",
+      "code": "d61e31ed-b090-4596-9eda-d1cdd700e502",
+      "interceptionPoints": {},
+      "credentials": {
+        "enabled": "No"
+      },
+      "prevStatus": "Processing",
+      "medium": [
+        "English"
+      ],
+      "posterImage": "https://ekstep-public-qa.s3-ap-south-1.amazonaws.com/content/do_21254581633850572811153/artifact/download-2_1531471721191.jpg",
+      "idealScreenSize": "normal",
+      "createdOn": "2022-02-18T10:21:32.045+0000",
+      "se_boards": [
+        "State (Gujarat)"
+      ],
+      "copyrightYear": 2020,
+      "contentDisposition": "inline",
+      "licenseterms": "By creating any type of content (resources, books, courses etc.) on DIKSHA, you consent to publish it under the Creative Commons License Framework. Please choose the applicable creative commons license you wish to apply to your content.",
+      "lastUpdatedOn": "2022-02-18T10:40:51.456+0000",
+      "dialcodeRequired": "No",
+      "lastStatusChangedOn": "2022-02-18T10:40:51.456+0000",
+      "createdFor": [
+        "01338593919406080038",
+        "01338679957298380810344"
+      ],
+      "creator": "Gujarat2",
+      "os": [
+        "All"
+      ],
+      "se_FWIds": [
+        "gj_k-12_1"
+      ],
+      "pkgVersion": 1,
+      "versionKey": "1645179877009",
+      "idealScreenDensity": "hdpi",
+      "framework": "gj_k-12_1",
+      "lastSubmittedOn": "2022-02-18T10:24:37.001+0000",
+      "createdBy": "ef2e9696-7ef1-4cb2-bc28-4cac604f7f41",
+      "compatibilityLevel": 1,
+      "board": "State (Gujarat)",
+      "resourceType": "Learn"
+    }
+  }
+}
