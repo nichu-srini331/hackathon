@@ -1,9 +1,11 @@
 import React, { useCallback,useEffect, useState } from 'react'
-import axios from 'axios'
+import axios, { Axios } from 'axios'
+import{BrowserRouter, Route,Routes,Router,Link} from 'react-router-dom';
+import { Button } from 'bootstrap';
 
 const token =
 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJRZ3BFVlNzVE9rR0RRamVFNVNLOUZ6dEVHQ254d2tuRyJ9.lA-IzBtRtwONpb5N-hZjnl9nPLjz2kjDRahXAtM8Euc';
-const apiurl="https://api.dev.diksha.gov.in/api/collection/v1/hierarchy/do_2134773237963653121113";
+const apiurl="https://api.dev.diksha.gov.in/api/content/v1/search";
 
 
 axios.interceptors.request.use(
@@ -15,20 +17,48 @@ axios.interceptors.request.use(
     return Promise.reject(error);
   }
 )
+
+
 function Course() {
-  const [content,setContent] = useState();
+  const [content,setContent] = useState([]);
   useEffect(()=>{
     fetch()
-  },[])
+  })
   const fetch = useCallback(async () => {
+    // try{
+    //   const res = await axios.get(`${apiurl}`);
+    //   console.log(res.data.result.content);
+    //   setContent(res.data.result.content);
+    // }catch(err){
+    //   console.log(err.message);
+    // }
     try{
-      const res = await axios.get(`${apiurl}`);
-      console.log(res.data);
-      setContent(res.data.result.content);
+     axios.post(`${apiurl}`,{
+      "request": {
+        "filters": {
+          "primaryCategory": [
+            "Digital Textbook"
+          ],
+          "se_boards": [
+            "State (Gujarat)"
+          ],
+          "se_mediums": [
+            "English"
+          ],
+          "se_gradeLevels": [
+            "Class 7"
+          ]
+        },
+        "limit": 1000
+      }
+     }).then(res=>setContent(res.data.result.content))
     }catch(err){
       console.log(err.message);
     }
   })
+  const fetc = () => {
+    console.log(content)
+  }
   return (
 <div class='container'>
 
@@ -53,7 +83,7 @@ function Course() {
         </div>
         </div>
     </ul>
-  {/* <button onClick={fetch}>HELLO</button> */}
+
 </div>
   </div>
 <div class="col-6">
@@ -62,13 +92,19 @@ function Course() {
 <h2 class="h2-course">Welcome back,you are doing great</h2>
   </div>
   <h1 class="h1-course you">Your Courses,</h1>
-  <div class="card">
-  <img class="card-img-top" src="" alt="Card image cap"/>
-  <div class="card-body">
-    <h1>{content.se_subjects}</h1>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+   <div class="cards">
+   {content.map(con => {
+    return(
+<a href='#'>
+  <div class="card card-course">
+ <div class="card-body">
+<Link to="/collection"><h1 class="card-h1">{con.se_subjects}</h1></Link>    
+ </div>
+</div></a>  
+    )    
+    })} 
   </div>
-</div>
+
 </div>
 <div class="col-3 r">
 </div>

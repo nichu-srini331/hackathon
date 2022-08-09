@@ -4,11 +4,21 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './App.css';
 import axios, { Axios } from 'axios';
 import Course from './Course';
+import{BrowserRouter, Route,Routes,Router} from 'react-router-dom';
+import Collection from './Collection';
+import React, { useCallback,useEffect, useState } from 'react'
+
 
 function App() {
+  
   return (
     <div className="App">
-  <Course/>
+      <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Course/>}/>
+    <Route path="/collection" element={<Collection/>}/>
+  </Routes>
+  </BrowserRouter>
     </div>
   );
 }
