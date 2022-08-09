@@ -7,6 +7,8 @@ import Course from './Course';
 import{BrowserRouter, Route,Routes,Router} from 'react-router-dom';
 import Collection from './Collection';
 import React, { useCallback,useEffect, useState } from 'react'
+import Science from './Science';
+import Questions from './Questions';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
   <Routes>
     <Route path="/" element={<Course/>}/>
     <Route path="/collection" element={<Collection/>}/>
+    <Route path="/science" element={<Science/>}/>
+    <Route path="/quest" element={<Questions/>}/>
   </Routes>
   </BrowserRouter>
     </div>

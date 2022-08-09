@@ -21,10 +21,11 @@ axios.interceptors.request.use(
 
 function Course() {
   const [content,setContent] = useState([]);
-  useEffect(()=>{
-    fetch()
+  useEffect( ()=>{
+ fetc();
   })
-  const fetch = useCallback(async () => {
+  console.log("hi",content);
+  // const fetch = useCallback(async () => {
     // try{
     //   const res = await axios.get(`${apiurl}`);
     //   console.log(res.data.result.content);
@@ -32,33 +33,36 @@ function Course() {
     // }catch(err){
     //   console.log(err.message);
     // }
+    console.log(1);
+   
+  const fetc = (() => {
     try{
      axios.post(`${apiurl}`,{
-      "request": {
-        "filters": {
-          "primaryCategory": [
-            "Digital Textbook"
-          ],
-          "se_boards": [
-            "State (Gujarat)"
-          ],
-          "se_mediums": [
-            "English"
-          ],
-          "se_gradeLevels": [
-            "Class 7"
-          ]
-        },
-        "limit": 1000
+        "request": {
+          "filters": {
+            "primaryCategory": [
+              "Digital Textbook"
+            ],
+            "se_boards": [
+              "State (Gujarat)"
+            ],
+            "se_mediums": [
+              "English"
+            ],
+            "se_gradeLevels": [
+              "Class 7"
+            ]
+          },
+          "limit": 1000
+        }
+       }).then(res=>setContent(res.data.result.content))
+       console.log("hello",content)
+      }catch(err){
+        console.log(err.message);
       }
-     }).then(res=>setContent(res.data.result.content))
-    }catch(err){
-      console.log(err.message);
-    }
-  })
-  const fetc = () => {
-    console.log(content)
-  }
+    })
+  
+
   return (
 <div class='container'>
 
@@ -93,16 +97,18 @@ function Course() {
   </div>
   <h1 class="h1-course you">Your Courses,</h1>
    <div class="cards">
-   {content.map(con => {
-    return(
 <a href='#'>
   <div class="card card-course">
  <div class="card-body">
-<Link to="/collection"><h1 class="card-h1">{con.se_subjects}</h1></Link>    
+<Link to="/collection"><h1 class="card-h1">{content[0]?.se_subjects}</h1></Link>   
  </div>
 </div></a>  
-    )    
-    })} 
+<a href='#'>
+  <div class="card card-course">
+ <div class="card-body">
+<Link to="/Science"><h1 class="card-h1">{content[1]?.se_subjects}</h1></Link>   
+ </div>
+</div></a>  
   </div>
 
 </div>

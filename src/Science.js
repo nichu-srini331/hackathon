@@ -21,7 +21,7 @@ const apiurl="https://api.dev.diksha.gov.in/api/content/v1/search";
 
 
 
-function Collection() {
+function Science() {
     const [coll,setcoll] = useState([]);
     const[arti,setarti] = useState([])
   useEffect(()=>{
@@ -36,10 +36,10 @@ function Collection() {
     //   console.log(err.message);
     // }
     try{
-     axios.get(`https://api.dev.diksha.gov.in/api/collection/v1/hierarchy/do_2134773513380331521130`).then(res =>{
+     axios.get(`https://api.dev.diksha.gov.in/api/collection/v1/hierarchy/do_2134773237963653121113`).then(res =>{
         setcoll(res.data.result.content.children);
-        setarti(coll[0].children[0].artifactUrl);
-        console.log(res.data.result.content);
+        console.log(res.data.result.content.children);
+        // setarti(coll[0].children[0].artifactUrl);
      })
     }catch(err){
       console.log(err.message);
@@ -54,13 +54,9 @@ function Collection() {
 //   }
 
     return (
-   <div>
-   {/* <h1> <a href={arti}>Digital Content</a></h1>
-   {/* <button onClick={ft}>Click</button> */}
-   {/*<h1>Video file :Not available</h1> */}
-   <h1 class="h1-course">Digintal Content</h1>
+        <div>
+            <h1 class="h1-course">Digintal Content</h1>
    <div class="cards">
-  
 {coll.map(con => {
     return(
    <a href='#'>
@@ -79,10 +75,28 @@ function Collection() {
         <iframe width="420" height="345" src={con.children[1].artifactUrl}>
 </iframe> */}
    </div>
-   
+   <h1 class="h1-course">Video Content</h1>
+<div class="cards">
+{coll.map(con => {
+    return(
+   <a href='#'>
+  <div class="card card-course">
+ <div class="card-body">
+        {/* <iframe  src={con.children[1].artifactUrl}>
+</iframe>  */}
+<a href={con.children[1].artifactUrl}>Unit {coll.indexOf(con)+1} Video</a>
+<br/>
    </div>
-  
+   </div>
+</a>  
+    )})
+ 
+}
+{/* <h1>{con.children[0].artifactUrl}</h1>
+        <iframe width="420" height="345" src={con.children[1].artifactUrl}>
+</iframe> */}
+   </div>
+   </div> 
   )
 }
-
-export default Collection
+export default Science
